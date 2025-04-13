@@ -1,0 +1,24 @@
+spring:
+    datasource:
+        url: jdbc:postgresql://localhost/analyzer
+        username: postgres
+        password: postgres
+        driver: org.postgresql.Driver
+    flyway:
+        enabled: true
+        baseline-on-migrate: true
+        locations: classpath:db/migration/pg
+    jpa:
+        show-sql: true
+        #hibernate: 
+            #ddl-auto: validate
+        properties:
+            hibernate:
+                format_sql: true 
+                
+server:
+    name: localhost:8080
+
+#logging:
+#    level:
+        #org.flywaydb: DEBUG
